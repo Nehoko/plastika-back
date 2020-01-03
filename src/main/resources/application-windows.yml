@@ -2,11 +2,9 @@ server:
   port: 8080
 spring:
   datasource:
-    url: "jdbc:h2:file:~/data/plastika"
+    url: "jdbc:h2:file:./../database/plastika"
     driver-class-name: org.h2.Driver
     username: "sa"
     password:
   jpa:
     database-platform: "org.hibernate.dialect.H2Dialect"
-  profiles:
-    active:@activatedProperties@

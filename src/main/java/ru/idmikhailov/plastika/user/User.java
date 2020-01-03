@@ -15,6 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 public class User {
+
     @Id
     private Long id;
     private String login;
@@ -22,4 +23,8 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private UserStatus status;
+
+    public User() {
+
+    }
 }
