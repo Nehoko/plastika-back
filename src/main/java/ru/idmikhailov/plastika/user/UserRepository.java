@@ -1,7 +1,9 @@
 package ru.idmikhailov.plastika.user;
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends Repository<User, Long> {
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {
     User findByLogin(String login);
 }

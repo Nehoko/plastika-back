@@ -16,7 +16,14 @@ public class Product {
     private String name;
     private Double price;
     private String picture;
+    private Long count;
 
     public Product() {
+    }
+    public Product(ProductDTO productDTO) {
+        this.name = productDTO.getName();
+        this.price = productDTO.getPrice();
+        this.picture = productDTO.getPicture();
+        this.count = productDTO.getCount();
     }
 }

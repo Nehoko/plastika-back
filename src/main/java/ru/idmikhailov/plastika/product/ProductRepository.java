@@ -1,7 +1,9 @@
 package ru.idmikhailov.plastika.product;
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ProductRepository extends Repository<Product, Long> {
+@Repository
+public interface ProductRepository extends CrudRepository<Product, Long> {
     Product findByName(String name);
 }
